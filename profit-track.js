@@ -121,10 +121,14 @@ showProfitRatesContainer();
 
 profitRatesBtn.addEventListener("click", () => {
     // console.log(`Clicked on profitRatesBtn`);
+    offerDetailsBtn.style.background = "#242424";
+    profitRatesBtn.style.background = "rgb(42, 42, 42)";
     showProfitRatesContainer();
 });
 
 offerDetailsBtn.addEventListener("click", () => {
     // console.log(`Clicked on offerDetailsBtn`);
+    profitRatesBtn.style.background = "#242424";
+    offerDetailsBtn.style.background = "rgb(42, 42, 42)";
     showOfferDetailsContainer();
 });
