@@ -1,13 +1,17 @@
-import { todayDeal } from "./js/todayDeal.js"
-import { mobiles } from "./js/mobiles.js"
-import { laptops } from "./js/laptops.js"
-import { televisions } from "./js/televisions.js"
-import { homeDecorAndFurnishings } from "./js/homeDecorAndFurnishings.js"
-import { everydayElectronics } from "./js/everydayElectronics.js"
-import { washingMachines } from "./js/washingMachines.js"
-import { kitchenAndDining } from "./js/kitchenAndDining.js"
-import { bluetoothSpeakers } from "./js/bluetoothSpeakers.js"
-import { smartWatchAndFitnessBand } from "./js/smartWatchAndFitnessBand.js"
+import { todayDeal } from "./js/todayDeal.js";
+
+import { mobiles } from "./js/mobiles.js";
+import { laptops } from "./js/laptops.js";
+import { televisions } from "./js/televisions.js";
+import { homeDecorAndFurnishings } from "./js/homeDecorAndFurnishings.js";
+import { everydayElectronics } from "./js/everydayElectronics.js";
+import { washingMachines } from "./js/washingMachines.js";
+import { kitchenAndDining } from "./js/kitchenAndDining.js";
+import { bluetoothSpeakers } from "./js/bluetoothSpeakers.js";
+import { smartWatchAndFitnessBand } from "./js/smartWatchAndFitnessBand.js";
+
+import { autocompleteListWithLinks } from "./js/autocomplete.js";
+
 
 let slideBtnLeft = document.getElementById("slide-btn-left")
 let slideBtnRight = document.getElementById("slide-btn-right")
@@ -19,7 +23,7 @@ let imgItem = document.querySelectorAll(".image-item")
 let startSlider = 0
 let endSlider = (imgItem.length - 1) * 100  // 700
 
-slideBtnLeft.addEventListener("click", handleLeftBtn)
+slideBtnLeft.addEventListener("click", handleLeftBtn);
 
 function handleLeftBtn() {
     if (startSlider < 0) {
@@ -336,3 +340,79 @@ function sliderCode() {
 };
 
 sliderCode();
+
+
+
+
+// Autocomplete Search Bar
+const inputBox = document.querySelector(".input-box");
+const resultsBox = document.querySelector(".result-box");
+const searchBtn = document.querySelector(".search-btn");
+
+inputBox.onkeyup = function () {
+    let resultObjectsArray = [];
+    let input = inputBox.value;
+    if (input.length) {
+        resultObjectsArray = autocompleteListWithLinks.filter(({ keyword }) => {
+            // console.log(keyword);
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        });
+        // console.log(resultObjectsArray);
+
+        // Search by clicking on btn
+        searchBtn.addEventListener("click", () => {
+            // console.log("Clicked on searchBtn");
+            let resultObj = resultObjectsArray.find(({ keyword }) => keyword.toLowerCase() === input.toLowerCase());
+            // console.log(resultObj.link);
+            location.href = resultObj.link;
+        });
+
+    };
+
+    display(resultObjectsArray);
+
+    if (!resultObjectsArray.length) {
+        resultsBox.innerHTML = "";
+    };
+
+};
+
+
+function display(resultObjectsArray) {
+    // console.log(resultObjectsArray);
+    let content = resultObjectsArray.map(({ keyword, link }) => {
+        return `<li class="list-ele">
+        <a href=${link}>${keyword}</a>
+        </li>`;
+    });
+    // console.log(content);
+    resultsBox.innerHTML = `<ul>${content.join("")}</ul>`;
+
+
+    const listElements = document.querySelectorAll(".list-ele");
+    // console.log(listElements);
+    for (const listEle of listElements) {
+        if (listEle) {
+            listEle.addEventListener("click", () => {
+                console.log("Clicked on listEle");
+                // console.log(listEle);
+                // console.log(listEle.innerHTML);
+                // console.log(listEle.innerText);
+                // console.log(listEle.textContent);
+                inputBox.value = listEle.innerText;
+                resultsBox.innerHTML = "";
+            });
+        };
+    };
+
+};
+
+
+const navCoverDiv = document.querySelector(".nav-cover-div");
+inputBox.addEventListener("click", () => {
+    navCoverDiv.classList.add("nav-cover");
+});
+
+document.body.addEventListener('click', () => {
+    navCoverDiv.classList.remove("nav-cover");
+}, true); 

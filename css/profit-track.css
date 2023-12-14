@@ -1,0 +1,265 @@
+body {
+    background-color: rgb(47, 47, 47);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    height: 3rem;
+    margin: auto;
+}
+
+.fa-arrow-left-a-tag {
+    text-decoration: none;
+}
+
+.fa-arrow-left {
+    margin: auto 40px auto 30px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.top-container {
+    background-color: #242424;
+    margin: auto;
+    width: 97%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.top-container-first {
+    width: 190px;
+    margin: auto;
+    position: relative;
+}
+
+.top-container-first a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    margin: 0 0 0 auto;
+}
+
+.logo-txt {
+    display: inline;
+    margin: 0 auto 0 0;
+}
+
+.logo-txt h3 {
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.logo-txt h6 {
+    color: white;
+    margin: 0 10px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.6rem;
+}
+
+.top-container-second {
+    background-color: rgb(42, 42, 42);
+    width: 96%;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.top-container-second .first:after {
+    content: "";
+    background-color: rgb(67, 67, 67);
+    position: absolute;
+    width: 3px;
+    height: 100px;
+    top: 5.2rem;
+    left: 50%;
+    display: block;
+}
+
+.top-container-second .first,
+.top-container-second .second {
+    margin: auto;
+}
+
+.first h6,
+.first h4,
+.second h4,
+.second h6 {
+    color: white;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.top-container-third {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    padding: 1.5rem;
+    justify-content: space-around;
+}
+
+.top-container-third .first-btn {
+    border-radius: 30px;
+    background-color: #242424;
+    border: 2px solid rgb(67, 67, 67);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    text-align: center;  
+    margin-left: 2rem;  
+}
+
+.top-container-third .first-btn:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+.top-container-third .second-btn {
+    border-radius: 30px;
+    background-color: #08a92b;
+    border: 2px solid #08a92b;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+.top-container-third .second-btn:hover {
+    background-color: rgb(12, 212, 56)
+}
+
+#custom-tooltip {
+    visibility: hidden;
+    margin-left: 0.2rem;
+    padding: 5px 12px;
+    background-color: rgb(67, 67, 67);
+    border-radius: 4px;
+    color: #fff;
+}
+
+.main-container {
+    background-color: #242424;
+    width: 97%;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.main-container-btn-div {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    padding: 1.5rem;
+    justify-content: space-around;
+}
+
+.main-container-btn-div .main-container-btn {
+    border-radius: 30px;
+    background-color: #242424;
+    border: 2px solid rgb(67, 67, 67);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+.main-container-btn-div .main-container-btn:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+.profit-rates-container {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    padding: 1.5rem;
+    justify-content: space-around;
+}
+
+.profit-rates-body tr th {
+    background-color: #242424;
+    color: #08a92b;
+    width: 25%;
+}
+
+.profit-rates-body tr td {
+    background-color: #242424;
+    color: white;
+}
+
+.offer-details-container {
+    width: 96%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.offer-details-container h6 {
+    font-weight: 600;
+    color: white;
+}
+
+.offer-details-container ul li {
+    color: white;
+    line-height: 2rem;
+}
+
+.offer-details-container hr {
+    background-color: rgb(67, 67, 67);
+    height: 1rem;
+}
+
+
+@media screen and (max-width: 500px) {
+    .top-container-first {
+        margin: 5px auto;
+    }
+
+    .top-container-second .first:after {
+        left: 47%;
+    }
+
+    .top-container-third .first-btn {
+        font-size: 0.7rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .top-container-third .second-btn {
+        font-size: 0.7rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .main-container-btn-div .main-container-btn {
+        padding: 0.5rem 0.9rem;
+    }
+}

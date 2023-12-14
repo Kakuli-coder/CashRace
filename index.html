@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <header class="header" id="Navigation">
+    <header class="header">
         <div class="container container-header">
             <a href="https://cashrace.in">
                 <div class="logo-container border-white">
@@ -37,10 +37,13 @@
             </a>
 
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search CashRace.in" />
-                <div class="search-icon">
+                <div class="row">
+                <input type="text" class="input-box" placeholder="Search CashRace.in" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <button class="search-btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                </button>
+            </div>
+            <div class="result-box"></div>
 
             </div>
 
@@ -69,6 +72,8 @@
             </ul>
         </div>
     </nav>
+
+    <div class="nav-cover-div"></div>
 
     <!--sidebar navigation-->
     <div class="sidebar-container-navigation" id="sidebar-container-navigation-id">
@@ -1033,7 +1038,7 @@
 
     <footer>
         <div class="top">
-            <a href="#Navigation">Back to Top</a>
+            <a href="#">Back to Top</a>
         </div>
         <div class="customer-footer">
             <div class="cust1">
