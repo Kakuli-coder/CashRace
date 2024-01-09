@@ -1,3 +1,6 @@
+// Site developed by
+// Kakuli - https://www.linkedin.com/in/mekakuli
+
 import { todayDeal } from "./js/todayDeal.js";
 
 import { mobiles } from "./js/mobiles.js";
@@ -98,7 +101,7 @@ for (let i = 0; i < todayDealLength; i++) {
                 </div>
             <div class="discount_Container">
                 <p>Up to ${todayDeal[i].discount}% off</p>
-                <p>${todayDeal[i].DealOfDay}</p>
+                <p class="hide-on-mobile">${todayDeal[i].DealOfDay}</p>
             </div>
             <p>${todayDeal[i].desc}</p>
         </div>
@@ -115,33 +118,53 @@ let today_deals_product_itemEl = document.querySelectorAll(".today_deals_product
 
 let startProduct = 0;
 
-
 today_deal_btn_prevEl.addEventListener("click", () => {
 
+    if (window.matchMedia("(max-width: 1290px)").matches) {
+        // Viewport is less or equal to 1290 pixels wide
+        if (startProduct < 0) {
+            startProduct += 20
+        };
+        if (startProduct > -2000) {
+            today_deals_product_itemEl.forEach(el => {
+                el.style.transform = `translateX(${startProduct}%)`
+            })
+        };
+    };
 
-    if (startProduct < 0) {
-        startProduct += 500
-    }
-    if (startProduct > -2000) {
-        today_deals_product_itemEl.forEach(el => {
-            el.style.transform = `translateX(${startProduct}%)`
-        })
-    }
-
-})
+    if (window.matchMedia("(max-width: 1500px)").matches) {
+        // Viewport is less or equal to 1500 pixels wide
+        if (startProduct < 0) {
+            startProduct += 380
+        };
+        if (startProduct > -2000) {
+            today_deals_product_itemEl.forEach(el => {
+                el.style.transform = `translateX(${startProduct}%)`
+            })
+        };
+    };
+});
 
 today_deal_btn_nextEl.addEventListener("click", () => {
-    // alert("next")
+    // alert("next");
 
-    if (startProduct > -1000) {
-        startProduct -= 500
-    }
+    if (window.matchMedia("(max-width: 1290px)").matches) {
+        // Viewport is less or equal to 1290 pixels wide
+        if (startProduct > -800) {
+            startProduct -= 10
+        };
+    };
+
+    if (window.matchMedia("(max-width: 1500px)").matches) {
+        // Viewport is less or equal to 1500 pixels wide
+        if (startProduct > -1000) {
+            startProduct -= 380
+        };
+    };
 
     today_deals_product_itemEl.forEach(el => {
         el.style.transform = `translateX(${startProduct}%)`
-    })
-
-
+    });
 });
 
 
@@ -165,7 +188,7 @@ function showCustomProductContainer(productName, product, productViewAllLink) {
                 <div class="todayDeals_product_image">
                     <img src=${product[i].img} alt=${product[i].alt} />
                 </div>
-            <div class="discount_Container">
+            <div class="product-discount_Container">
                 <p>${product[i].discount}% off</p>
                 <p>${product[i].priceNow}</p>
                 <p><s>${product[i].priceBefore}</s></p>
@@ -314,14 +337,28 @@ function sliderCode() {
     product_btn_prevEl.addEventListener("click", () => {
         // console.log(`Clicked on product_btn_prevEl`);
 
-        if (startDealsAndCouponsProduct < 0) {
-            startDealsAndCouponsProduct += 500
+        if (window.matchMedia("(max-width: 1290px)").matches) {
+            // Viewport is less or equal to 1290 pixels wide
+            if (startDealsAndCouponsProduct < 0) {
+                startDealsAndCouponsProduct += 10
+            };
+            if (startDealsAndCouponsProduct > -1000) {
+                product_itemEl.forEach(el => {
+                    el.style.transform = `translateX(${startDealsAndCouponsProduct}%)`
+                })
+            };
         };
 
-        if (startDealsAndCouponsProduct > -2000) {
-            product_itemEl.forEach(el => {
-                el.style.transform = `translateX(${startDealsAndCouponsProduct}%)`
-            });
+        if (window.matchMedia("(max-width: 1500px)").matches) {
+            // Viewport is less or equal to 1500 pixels wide
+            if (startDealsAndCouponsProduct < 0) {
+                startDealsAndCouponsProduct += 380
+            };
+            if (startDealsAndCouponsProduct > -2000) {
+                product_itemEl.forEach(el => {
+                    el.style.transform = `translateX(${startDealsAndCouponsProduct}%)`
+                })
+            };
         };
     });
 
@@ -329,8 +366,18 @@ function sliderCode() {
         // alert("next");
         // console.log(`Clicked on product_btn_nextEl`);
 
-        if (startDealsAndCouponsProduct > -1000) {
-            startDealsAndCouponsProduct -= 500
+        if (window.matchMedia("(max-width: 1290px)").matches) {
+            // Viewport is less or equal to 1290 pixels wide
+            if (startDealsAndCouponsProduct > -800) {
+                startDealsAndCouponsProduct -= 10
+            };
+        };
+
+        if (window.matchMedia("(max-width: 1500px)").matches) {
+            // Viewport is less or equal to 1500 pixels wide
+            if (startDealsAndCouponsProduct > -1000) {
+                startDealsAndCouponsProduct -= 380
+            };
         };
 
         product_itemEl.forEach(el => {
@@ -415,4 +462,47 @@ inputBox.addEventListener("click", () => {
 
 document.body.addEventListener('click', () => {
     navCoverDiv.classList.remove("nav-cover");
-}, true); 
+}, true);
+
+
+// Footer Div Show (Max Screen Size <= 600px)
+const collapseFooterLink2 = document.querySelector("#collapseFooterLink2");
+const collapseFooterDiv2 = document.querySelector("#collapseFooterDiv2");
+
+const collapseFooterLink3 = document.querySelector("#collapseFooterLink3");
+const collapseFooterDiv3 = document.querySelector("#collapseFooterDiv3");
+
+const collapseFooterLink4 = document.querySelector("#collapseFooterLink4");
+const collapseFooterDiv4 = document.querySelector("#collapseFooterDiv4");
+
+if (window.matchMedia("(max-width: 645px)").matches) {
+    collapseFooterDiv2.style.display = "none";
+    collapseFooterLink2.addEventListener("click", () => {
+        // console.log("Clicked on collapseFooterLink2");
+        if (collapseFooterDiv2.style.display === "none") {
+            collapseFooterDiv2.style.display = "block";
+        } else {
+            collapseFooterDiv2.style.display = "none";
+        };
+    });
+
+    collapseFooterDiv3.style.display = "none";
+    collapseFooterLink3.addEventListener("click", () => {
+        // console.log("Clicked on collapseFooterLink3");
+        if (collapseFooterDiv3.style.display === "none") {
+            collapseFooterDiv3.style.display = "block";
+        } else {
+            collapseFooterDiv3.style.display = "none";
+        };
+    });
+
+    collapseFooterDiv4.style.display = "none";
+    collapseFooterLink4.addEventListener("click", () => {
+        // console.log("Clicked on collapseFooterLink4");
+        if (collapseFooterDiv4.style.display === "none") {
+            collapseFooterDiv4.style.display = "block";
+        } else {
+            collapseFooterDiv4.style.display = "none";
+        };
+    });
+};
