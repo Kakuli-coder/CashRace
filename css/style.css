@@ -1,13 +1,13 @@
 /* Site developed by
     Kakuli - https://www.linkedin.com/in/mekakuli */
 
-html,body
-{
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
@@ -65,7 +65,7 @@ html,body
 }
 
 .border-white {
-    padding: 5px;
+    padding: 3px;
     border: 1.5px solid transparent;
 }
 
@@ -1288,6 +1288,7 @@ h3 {
 
 .db {
     display: block;
+    font-size: 0.8rem;
 }
 
 .cr-cashback {
@@ -1951,6 +1952,7 @@ h3 {
 
 .how-work-inner {
     text-align: center;
+    margin: 20px;
 }
 
 .average-saving {
@@ -2030,7 +2032,6 @@ h3 {
     }
 
     .saving-text {
-        margin-right: 42px;
         display: block;
         text-align: center;
     }
@@ -2052,7 +2053,6 @@ h3 {
     }
 
     .saving-text {
-        margin-right: 20px;
         display: block;
     }
 }
@@ -2068,7 +2068,7 @@ h3 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 40px;
+        padding: 24px;
     }
 
     .average-saving .btn {
@@ -2096,6 +2096,7 @@ h3 {
 
     .cr-usp {
         flex: 15%;
+        margin: auto 20px;
     }
 }
 
@@ -2119,7 +2120,8 @@ h3 {
         display: none;
     }
 
-    .today_deals_product_list, .products_list {
+    .today_deals_product_list,
+    .products_list {
         overflow-x: scroll;
     }
 
@@ -2157,9 +2159,10 @@ h3 {
 }
 
 @media (min-width: 601px) {
+
     .saving-text,
     .cat-head-txt {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .why-user-loves {
@@ -2474,6 +2477,7 @@ h3 {
 
     .login-container {
         margin-left: 20px;
+        height: 70%;
     }
 
     .fs16 {
@@ -2482,6 +2486,11 @@ h3 {
 
     .btn-xxl {
         min-width: 20%;
+        line-height: 3.5rem;
+    }
+
+    .saving-cat .btn-xxl {
+        line-height: 2.5rem;
     }
 
     .nav {
@@ -2565,7 +2574,7 @@ h3 {
     }
 
     .fa-2xl {
-        font-size: 4em !important;
+        font-size: 2.5em !important;
     }
 
     .how-work-step {
@@ -2586,11 +2595,11 @@ h3 {
     }
 
     .cat-head-txt {
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
 
     .db {
-        font-size: 1.2rem;
+        font-size: 0.7rem;
     }
 
     .saving-cat {
@@ -2652,7 +2661,7 @@ h3 {
     }
 
     .font-awesome-icon {
-        width: 5rem;
+        width: 3rem;
         text-align: center;
     }
 
@@ -2739,7 +2748,6 @@ h3 {
         height: 75px;
     }
 
-
     .nav {
         display: none;
     }
@@ -2792,7 +2800,7 @@ h3 {
 
     .login-container {
         height: 70%;
-        width: 80px;
+        width: 100px;
         line-height: 3.5rem;
         font-size: 3rem;
         margin: 0 30px;
@@ -2886,11 +2894,11 @@ h3 {
 
     .card-product h2 {
         padding: 0.5rem 2rem;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .card-nested p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .card-product-btn {
@@ -2907,8 +2915,8 @@ h3 {
 
     .best-cbstore {
         height: 150px;
-    white-space: nowrap;
-    overflow-x: auto;
+        white-space: nowrap;
+        overflow-x: auto;
     }
 
     .best-store-inner {
@@ -2959,7 +2967,7 @@ h3 {
     }
 
     .fs16 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .how-work-step {
@@ -2983,7 +2991,7 @@ h3 {
     }
 
     .font-awesome-icon {
-        min-width: 5rem;
+        min-width: 3.5rem;
     }
 
     .db {
@@ -3009,7 +3017,7 @@ h3 {
     }
 
     .saving-text {
-        margin: 20px 40px;
+        padding: 10px 40px;
     }
 
     .promo-item,
@@ -3136,6 +3144,10 @@ h3 {
         margin: 10px;
     }
 
+    .testimonial-item .fs16 {
+        font-size: 1rem;
+    }
+
     .testimonial-item:before {
         font-size: 5rem;
         top: 0;
@@ -3199,6 +3211,34 @@ h3 {
     }
 }
 
+@media (max-width: 500px) {
+    #slide-btn-right {
+        margin-left: 85%;
+    }
+}
+
+@media (max-width: 370px) {
+    .db {
+        font-size: 0.8rem;
+    }
+
+    .today_deals_heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .cat-head-txt {
+        font-size: 1.2rem;
+    }
+
+    .saving-cat a {
+        font-size: 1.2rem;
+    }
+
+    .login-container {
+        width: 120px;
+    }
+}
+
 /* @media screen and (min-width: 430px) and (max-width: 645px) {
     input::placeholder {
         font-size: 1rem;
@@ -3217,10 +3257,22 @@ h3 {
 
     .search-container {
         margin-left: 25px;
-    width: 750px;
+        width: 750px;
     }
 
-    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    menu,
+    nav,
+    section,
+    summary {
         width: 100%;
     }
 
@@ -3278,13 +3330,14 @@ h3 {
         margin: 5px 20px;
     }
 
-    .saving-cat, .cr-usp {
+    .saving-cat,
+    .cr-usp {
         justify-content: left;
     }
 
     .fa-2xl {
         font-size: 3em;
-        }
+    }
 
     .result-box {
         width: 700px;
@@ -3306,7 +3359,6 @@ h3 {
         height: 360px;
     }
 }
-
 
 @media screen and (min-width: 992px) and (max-width: 1145px) {
     .card-product {
@@ -3330,11 +3382,9 @@ h3 {
         width: 510px;
         max-height: 16rem;
     }
-
-
 }
 
-@media screen and (min-width: 1145px) and (max-width: 1290px){
+@media screen and (min-width: 1145px) and (max-width: 1290px) {
     .card-product {
         flex: 20%;
     }
@@ -3348,7 +3398,7 @@ h3 {
     }
 }
 
-@media screen and (min-width: 1220px) and (max-width: 1290px){
+@media screen and (min-width: 1220px) and (max-width: 1290px) {
     .result-box {
         width: 550px;
     }

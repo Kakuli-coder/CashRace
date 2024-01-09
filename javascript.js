@@ -16,6 +16,10 @@ import { smartWatchAndFitnessBand } from "./js/smartWatchAndFitnessBand.js";
 import { autocompleteListWithLinks } from "./js/autocomplete.js";
 
 
+if (window.matchMedia("(max-width: 445px)").matches) {
+    document.querySelector(".input-box").placeholder = "Search";
+};
+
 let slideBtnLeft = document.getElementById("slide-btn-left")
 let slideBtnRight = document.getElementById("slide-btn-right")
 let imgItem = document.querySelectorAll(".image-item")
