@@ -2301,6 +2301,7 @@ h3 {
 @media (max-width: 1024px) {
   .cat-tab {
     margin: 0 10px 0;
+    padding-bottom: 2px;
   }
 }
 
@@ -3234,7 +3235,7 @@ h3 {
   }
 
   .cat-innerlft {
-    padding: 0 15px;
+    padding: 10px 15px;
   }
 
   .cat-innerlft span {

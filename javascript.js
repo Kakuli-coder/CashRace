@@ -236,10 +236,12 @@ function showCustomProductContainer(productName, product, productViewAllLink) {
 
     let productContainerHTML = `
 <div class="cat-innerlft hide-on-small-only">
+<a class="view-all" target="_blank" href="${productViewAllLink}">View All</a>
                         <span class="dib ml6 fs18 fw-bold">Best ${productName}
                     Deals</span>
-                    <a class="view-all" target="_blank" href="${productViewAllLink}">View All</a>
+                    
                 </div>
+                
 
                     <div class="today_deals_product_container">
                         <div class="today_deals_btn_container">
