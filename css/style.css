@@ -2556,7 +2556,7 @@ h3 {
     width: 98%;
   }
 
-  .viewed-deal .view-all {
+  .viewed-deal {
     margin: 10px;
   }
 
@@ -3238,8 +3238,7 @@ h3 {
     width: 80%;
   }
 
-  .shop-head .view-all,
-  .view-all {
+  .shop-head{
     font-size: 1rem;
     margin: 8px 0;
   }
