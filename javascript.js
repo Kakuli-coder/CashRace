@@ -16,71 +16,102 @@ import { smartWatchAndFitnessBand } from "./js/smartWatchAndFitnessBand.js";
 import { autocompleteListWithLinks } from "./js/autocomplete.js";
 
 
+
+const inputBox = document.querySelector(".input-box");
+const openHeaderSidebar = document.querySelector("#open-header-sidebar");
+const logoContainer = document.querySelector(".logo-container");
+
 if (window.matchMedia("(max-width: 445px)").matches) {
-    document.querySelector(".input-box").placeholder = "Search";
+    inputBox.placeholder = "Search";
 };
 
-let slideBtnLeft = document.getElementById("slide-btn-left")
-let slideBtnRight = document.getElementById("slide-btn-right")
-let imgItem = document.querySelectorAll(".image-item")
+if (window.matchMedia("(max-width: 645px)").matches) {
+    inputBox.addEventListener("click", () => {
+        openHeaderSidebar.style.display = "none";
+        logoContainer.style.display = "none";
+    });
+
+    document.body.addEventListener('click', () => {
+        openHeaderSidebar.style.display = "inline-block";
+        logoContainer.style.display = "flex";
+    }, true);
+};
 
 
-// console.log(imgItem.length - 1)
 
-let startSlider = 0
-let endSlider = (imgItem.length - 1) * 100  // 700
+
+
+let slideBtnLeft = document.getElementById("slide-btn-left");
+let slideBtnRight = document.getElementById("slide-btn-right");
+let imgItem = document.querySelectorAll(".image-item");
+
+// console.log(imgItem.length - 1);
+
+let startSlider = 0;
+let endSlider;
+if (window.matchMedia("(max-width: 645px)").matches) {
+    endSlider = (imgItem.length - 4) * 100;  // 400
+};
+if (window.matchMedia("(min-width: 646px)").matches) {
+    endSlider = (imgItem.length - 1) * 100;  // 700
+};
 
 slideBtnLeft.addEventListener("click", handleLeftBtn);
 
 function handleLeftBtn() {
     if (startSlider < 0) {
         startSlider = startSlider + 100;
-    }
+    };
     imgItem.forEach(element => {
         element.style.transform = `translateX(${startSlider}%)`;
-    })
-}
+    });
+};
 
-slideBtnRight.addEventListener("click", handleRightBtn)
+slideBtnRight.addEventListener("click", handleRightBtn);
 
 function handleRightBtn() {
     if (startSlider >= -endSlider + 100) {
         startSlider = startSlider - 100;
-    }
+    };
     imgItem.forEach(element => {
         element.style.transform = `translateX(${startSlider}%)`;
-    })
+    });
+};
 
-}
 //render automatic
 function renderSlideAuto() {
 
     if (startSlider >= -endSlider + 100) {
-        handleRightBtn()
+        handleRightBtn();
+        // console.log(endSlider);
     }
     else {
         startSlider = 0;
-    }
-}
+    };
+};
 setInterval(renderSlideAuto, 2000);
 
 
 
 
 /***** sidebar navigation  */
-const sidebarNavigationEl = document.getElementById("sidebar-container-navigation-id")
-const sidebarOpenNavigationEl = document.getElementById("open-nav-sidebar")
-const sidebarCloseNavigationEl = document.getElementById("sidebar-navigation-close")
+const sidebarNavigationEl = document.getElementById("sidebar-container-navigation-id");
+const sidebarOpenNavigationEl = document.getElementById("open-nav-sidebar");
+const sidebarOpenNavigationHeader = document.getElementById("open-header-sidebar");
+const sidebarCloseNavigationEl = document.getElementById("sidebar-navigation-close");
 
 
 //  console.log(sidebarNavigationEl)
 
 sidebarOpenNavigationEl.addEventListener("click", () => {
-    sidebarNavigationEl.classList.toggle("slidebar-show")
-})
+    sidebarNavigationEl.classList.toggle("slidebar-show");
+});
+sidebarOpenNavigationHeader.addEventListener("click", () => {
+    sidebarNavigationEl.classList.toggle("slidebar-show");
+});
 sidebarCloseNavigationEl.addEventListener("click", () => {
     sidebarNavigationEl.classList.toggle("slidebar-show")
-})
+});
 
 
 
@@ -396,7 +427,6 @@ sliderCode();
 
 
 // Autocomplete Search Bar
-const inputBox = document.querySelector(".input-box");
 const resultsBox = document.querySelector(".result-box");
 const searchBtn = document.querySelector(".search-btn");
 
@@ -445,7 +475,7 @@ function display(resultObjectsArray) {
     for (const listEle of listElements) {
         if (listEle) {
             listEle.addEventListener("click", () => {
-                console.log("Clicked on listEle");
+                // console.log("Clicked on listEle");
                 // console.log(listEle);
                 // console.log(listEle.innerHTML);
                 // console.log(listEle.innerText);
@@ -460,12 +490,16 @@ function display(resultObjectsArray) {
 
 
 const navCoverDiv = document.querySelector(".nav-cover-div");
+
 inputBox.addEventListener("click", () => {
     navCoverDiv.classList.add("nav-cover");
+    resultsBox.style.display = "block";
 });
 
 document.body.addEventListener('click', () => {
     navCoverDiv.classList.remove("nav-cover");
+    resultsBox.style.display = "none";
+    inputBox.value = "";
 }, true);
 
 

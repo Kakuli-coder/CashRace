@@ -1,0 +1,574 @@
+<!-- Site developed by
+    Kakuli - https://www.linkedin.com/in/mekakuli -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/cashRace-logo.png" />
+    <title>Best Cashback Offers - All Stores</title>
+
+    <!--css file-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/cashback-stores.css" />
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <span class="open-nav-slider" id="open-header-sidebar">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+            <a href="https://cashrace.in">
+                <div class="logo-container border-white">
+                    <img class="logo" src="images/cashRace-logo.png" alt="cashRace-logo-img">
+                    <div class="logo-txt">
+                        <h3>CashRace</h3>
+                        <h6>Chase the Race</h6>
+                    </div>
+                </div>
+            </a>
+
+            <div class="search-container">
+                <div class="row">
+                    <input type="text" class="input-box" placeholder="Search CashRace.in" autocomplete="off"
+                        autocorrect="off" autocapitalize="off" spellcheck="false" />
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="result-box"></div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--navigation-->
+    <nav class="nav">
+        <div class="container container-nav">
+            <ul>
+                <li class="border-white" id="open-nav-sidebar">
+                    <span class="open-nav-slider">
+                        <i class="fa-solid fa-bars"></i>
+                        All
+                    </span>
+                </li>
+                <li class="border-white"><a
+                        href="https://www.croma.com/searchB?q=best%20sellers%3Arelevance&text=best%20sellers">Best
+                        Sellers</a></li>
+                <li class="border-white"><a
+                        href="https://www.amazon.in/s?k=today+deals&crid=23AC0ZA2M8HIT&sprefix=today%2Caps%2C264&ref=nb_sb_ss_ts-doa-p_4_5">Today's
+                        Deals</a></li>
+                <li class="border-white"><a
+                        href="https://www.amazon.in/s?k=sale+today&crid=2XVQACTBKDED3&sprefix=sale++today%2Caps%2C273&ref=nb_sb_ss_ts-doa-p_3_10">Amazon
+                        Sale</a></li>
+                <li class="border-white"><a
+                        href="https://www.flipkart.com/search?q=sale+offer&sid=clo%2Ccfv&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_4_na_na_na&as-pos=1&as-type=RECENT&suggestionId=sale+offer%7CKurtas%2C+Ethnic+Sets+and+Bottoms&requestId=a205979b-f52e-4086-b6b2-cf594b302942&as-searchtext=sale">Flipkart
+                        Sale</a></li>
+                <li class="border-white"><a
+                        href="https://www.nykaa.com/search/result/?q=sale&root=search&searchType=Misc&suggestionType=query&ssp=5&tst=sale&searchItem=sale&sourcepage=home&">Nykaa
+                        Sale</a></li>
+                <li class="border-white"><a
+                        href="https://www.udemy.com/?utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=ue*79h9bSBU&ranMID=47901&ranEAID=ue*79h9bSBU&ranSiteID=ue.79h9bSBU-yjqow6WrpW1_jXVQXXR2Cg">Udemy
+                        Sale</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-cover-div"></div>
+
+    <!--sidebar navigation-->
+    <div class="sidebar-container-navigation" id="sidebar-container-navigation-id">
+        <div class="sidebar-left-part">
+            <div class="sidebar-top">
+                <i class="fa-solid fa-circle-user"></i>
+                <h2>Welcome to CashRace</h2>
+            </div>
+            <div class="sidebar-wrap">
+
+                <div class="sidebar-item">
+                    <h2>Trending</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.croma.com/searchB?q=best%20sellers%3Arelevance&text=best%20sellers">Best
+                                Sellers</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.in/s?k=new+releases&crid=GNS8BS54552F&sprefix=new+releases%2Caps%2C262&ref=nb_sb_ss_ts-doa-p_2_12">New
+                                Releases</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-item">
+                    <h2>Shop By Category</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.croma.com/searchB?q=mobile%3Arelevance&text=mobile">Mobiles,
+                                Computes</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.flipkart.com/search?q=electronics&sid=ckf%2Cczl&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_5_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_5_11_na_na_na&as-pos=5&as-type=RECENT&suggestionId=electronics%7CTelevisions&requestId=0782e1af-008b-4ecd-b8c8-afa9719ee18b&as-searchtext=electronics">TV,
+                                Appliances, Electronics</a>
+                        </li>
+                        <li>
+                            <a href="https://www.myntra.com/shop/men">Men's Fashion</a>
+                        </li>
+                        <li>
+                            <a href="https://www.myntra.com/shop/women">Women's Fashion</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nykaa.com/sp/pink-friday-makeup-sale/makeup-sale">Beauty Products</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.udemy.com/?utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=ue*79h9bSBU&ranMID=47901&ranEAID=ue*79h9bSBU&ranSiteID=ue.79h9bSBU-y7X32cQcyom4zugUSdMrlA">Online
+                                Courses</a>
+                        </li>
+                        <li>
+                            <a href="https://www.makemytrip.com/hotels/">Hotel Bookings</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-item hide-on-mobile">
+                    <h2>Cashback Stores</h2>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.amazon.in/?&linkCode=sl2&tag=mansihall100-21&linkId=fbdac635dc3a1deb4c479101ea4c1b98&language=en_IN&ref_=as_li_ss_tl">Amazon</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.flipkart.com/?affid=rohanpouri&affExtParam1=ENKR20231104A673535270&affExtParam2=ENKR20231104A673535270">Flipkart</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.nykaa.com/?ptype=home&utm_source=Affiliate&utm_medium=Cashkaro&utm_campaign=4_ENKR20231104A673535537&pid=4&sub2=ENKR20231104A673535537">Nykaa</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://beardo.in/?utm_source=Network_cashkaro&utm_campaign=trackier_2&click_id=654691368f74560344cdd423&utm_medium=ENKR20231104A673535730">Beardo</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://mamaearth.in/?utm_source=Cashkaro&utm_medium=affise_affiliate&utm_campaign=Sept23&utm_term=cps_19_ENKR20231104A673536049_ENKR20231104A673536049&pid=19&sub2=ENKR20231104A673536049&sub1=ENKR20231104A673536049">Mamaearth</a>
+                        </li>
+                        <li>
+                            <a href="https://www.tatacliq.com/?cid=af:homepage:cashkaro:hasoffers:15032017">TATA
+                                Cliq</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.myntra.com/?utm_source=cashkaro&utm_medium=Affiliates&utm_term=6546918a60a7570001e60948&pid=4&sub1=&sub2=ENKR20231104A673536876&utm_campaign=4_ENKR20231104A673536876&source=dms_trafficaffiliates&medium=cashkaro_rev">Myntra</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://linkredirect.in/visitretailer/924?id=2423240&shareid=ENKR20230319S22630031">Udemy</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.snapdeal.com/?utm_source=cashkaro&utm_medium=affiliate&utm_content=cashkaro&utm_campaign=ENKR20231104A673537890">Snapdeal</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://linkredirect.in/visitretailer/7535?id=1849693&shareid=ENKR20230324S22912660">GoDaddy</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.lotusbotanicals.com/collections/offers?utm_source=affiliate&utm_medium=mobligent&utm_campaign=offers_717_ENKR20231104A673538614_6546920cc4ccbc00011613c8">Lotus
+                                Botanicals</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.croma.com/?utm_source=Cashkaro&utm_medium=affiliate&utm_campaign=sok_Cashkaro_ENKR20231104A673539009&utm_content=cashback&sub1=6546922b80a0a00001d8c831">Croma</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.makemytrip.com/hotels/?cmp=disp_CashKaro_DH&source=ENKR20231104A673539055">Make
+                                My Trip</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-item">
+                    <h2>Help</h2>
+                    <ul>
+                        <li>
+                            <a href="profit-track.html">Track Your Profit</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <button id="sidebar-navigation-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="cashback-stores-main">
+    <div>
+        <h1>Best Cashback Offers - All Stores</h1>
+    </div>
+
+    <div class="store-innerblock">
+        <div class="store-block">
+            <a href="abhibus-coupons-promo-code-offers" target="_blank">
+                <img src="images/logo/amazon-logo.png" alt="Amazon">
+            </a>
+            <div class="store-offer">
+                <a href="abhibus-coupons-promo-code-offers" target="_blank">Amazon</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/Flipkart-logo.png" alt="Flipkart">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Flipkart</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/Myntra-logo.png" alt="Myntra">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Myntra</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/nykaa-logo.png" alt="Nykaa-Fashion">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Nykaa Fashion</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/tata-cliq-logo.png" alt="TATA-Cliq">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">TATA Cliq</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/udemy-logo.jpg" alt="Udemy">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Udemy</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/snapdeal-logo.png" alt="Snapdeal">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Snapdeal</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/realme-logo.jpg" alt="realme">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Realme</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/MakeMyTrip_Logo.png" alt="Make-My-Trip">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Make My Trip</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/lotus-botanicals-logo.jpg" alt="Lotus-Botanicals">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Lotus Botanicals</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/GoDaddy-logo.png" alt="Go-Daddy">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Go Daddy</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/croma-logo.jpg" alt="Croma">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Croma</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/Beardo-logo.png" alt="Beardo">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Beardo</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>
+
+        <div class="store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/mamaearth-logo.png" alt="Mamaearth">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Mamaearth</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>  
+        
+        <div class="store-block last-store-block">
+            <a href="" target="_blank">
+                <img src="images/logo/ajio-logo.jpg" alt="Ajio">
+            </a>
+            <div class="store-offer">
+                <a href="" target="_blank">Ajio</a>
+                <div>
+                    <i class="fa-solid fa-money-bills"></i>
+                    CR Cashback
+                </div>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    Deals & Coupons
+                </div>
+            </div>
+        </div>  
+
+    </div>
+</div>
+
+
+    <footer>
+        <div class="top">
+            <a href="https://cashrace.in">Back to Top</a>
+        </div>
+        <div class="customer-footer">
+            <div class="cust1">
+                <a class="cust-first" id="collapseFooterLink1">Popular Cashback Stores</a>
+                <div id="collapseFooterDiv1">
+                    <a class="cust-Second"
+                        href="https://www.amazon.in/?&linkCode=sl2&tag=mansihall100-21&linkId=fbdac635dc3a1deb4c479101ea4c1b98&language=en_IN&ref_=as_li_ss_tl">Amazon</a>
+                    <a class="cust-Second"
+                        href="https://www.flipkart.com/?affid=rohanpouri&affExtParam1=ENKR20231105A673843235&affExtParam2=ENKR20231105A673843235">Flipkart</a>
+                    <a class="cust-Second"
+                        href="https://www.nykaa.com/?ptype=home&utm_source=Affiliate&utm_medium=Cashkaro&utm_campaign=4_ENKR20231105A673843491&pid=4&sub2=ENKR20231105A673843491">Nykaa</a>
+                    <a class="cust-Second"
+                        href="https://www.myntra.com/?utm_source=cashkaro&utm_medium=Affiliates&utm_term=6547303ce2e9d80001133b6e&pid=4&sub1=&sub2=ENKR20231105A673843736&utm_campaign=4_ENKR20231105A673843736&source=dms_trafficaffiliates&medium=cashkaro_rev">Myntra</a>
+                    <a class="cust-Second"
+                        href="https://mamaearth.in/?utm_source=Cashkaro&utm_medium=affise_affiliate&utm_campaign=Sept23&utm_term=cps_19_ENKR20231105A673843928_ENKR20231105A673843928&pid=19&sub2=ENKR20231105A673843928&sub1=ENKR20231105A673843928">Mamaearth</a>
+                    <a class="cust-Second"
+                        href="https://www.udemy.com/?utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=ue*79h9bSBU&ranMID=47901&ranEAID=ue*79h9bSBU&ranSiteID=ue.79h9bSBU-uTQb36YZFiAFPP.2GsKn.A">Udemy</a>
+                </div>
+            </div>
+
+            <div class="cust1">
+                <a class="cust-first" id="collapseFooterLink2">More Stores</a>
+                <div id="collapseFooterDiv2">
+                    <a class="cust-Second"
+                        href="https://beardo.in/?utm_source=Network_cashkaro&utm_campaign=trackier_2&click_id=654730f7f313fd0345fc5d65&utm_medium=ENKR20231105A673846562">Beardo</a>
+                    <a class="cust-Second"
+                        href="https://www.tatacliq.com/?cid=af:homepage:cashkaro:hasoffers:15032017">TATA
+                        Cliq</a>
+                    <a class="cust-Second"
+                        href="https://www.snapdeal.com/?utm_source=cashkaro&utm_medium=affiliate&utm_content=cashkaro&utm_campaign=ENKR20231105A673847164">Snapdeal</a>
+                    <a class="cust-Second"
+                        href="https://www.godaddy.com/en-in?cjdata=MXxOfDB8WXww&isc=cjcfos1&AID=10379071&SID=ENKR20231105A673847405&utm_source=cj&utm_medium=affiliate&utm_campaign=xx-xx_corp_affiliate_10379071_001&utm_content=CashKaro_5374905&tgt=9242788">Go
+                        Daddy</a>
+                    <a class="cust-Second"
+                        href="https://www.lotusbotanicals.com/collections/offers?utm_source=affiliate&utm_medium=mobligent&utm_campaign=offers_717_ENKR20231105A673847871_654731491a9534000166515c">Lotus
+                        Botanicals</a>
+                    <a class="cust-Second"
+                        href="https://www.croma.com/?utm_source=Cashkaro&utm_medium=affiliate&utm_campaign=sok_Cashkaro_ENKR20231105A673848068&utm_content=cashback&sub1=65473157ae2cdb0001f4df91">Croma</a>
+                </div>
+            </div>
+
+            <div class="cust1">
+                <a class="cust-first" id="collapseFooterLink3">Top Categories</a>
+                <div id="collapseFooterDiv3">
+                    <a class="cust-Second" href="https://www.croma.com/phones-wearables/mobile-phones/c/10">Mobile
+                        Offers Today</a>
+                    <a class="cust-Second"
+                        href="https://www.amazon.in/s?k=laptop+offers+amazon+today&crid=2NR6HEFZT096E&sprefix=laptop+o%2Caps%2C249&ref=nb_sb_ss_ts-doa-p_2_8">Laptop
+                        Offers</a>
+                    <a class="cust-Second"
+                        href="https://www.croma.com/searchB?q=television%20offer%3Arelevance&text=television%20offer">Television
+                        Offers</a>
+                    <a class="cust-Second"
+                        href="https://www.amazon.in/s?k=grocery+offers+of+the+day&crid=1N9VV1KCOTLZ2&sprefix=grocery+off%2Caps%2C246&ref=nb_sb_ss_ts-doa-p_1_11">Grocery
+                        offers Today</a>
+                    <a class="cust-Second"
+                        href="https://www.amazon.in/s?k=sports+products&crid=2TX8O4Z1GOZ1O&sprefix=sports+products+%2Caps%2C248&ref=nb_sb_ss_ts-doa-p_1_16">Health,
+                        Sports & Fitness</a>
+                    <a class="cust-Second"
+                        href="https://www.tatacliq.com/the-beauty-store?&icid2=catd:nav:regu:bnav:m25:mulb:bst:01:R1">Beauty
+                        and Cosmetics Offers</a>
+                </div>
+            </div>
+
+            <div class="cust1">
+                <a class="cust-first" id="collapseFooterLink4">Connect with Us</a>
+                <div id="collapseFooterDiv4">
+                    <a class="cust-Second" href="#">Facebook</a>
+                    <a class="cust-Second" href="#">Twitter</a>
+                    <a class="cust-Second" href="#">Instagram</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <p>© Copyright 2023 | CashRace.in | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="javascript.js" type="module"></script>
+</body>
+
+</html>

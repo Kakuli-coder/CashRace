@@ -13,7 +13,7 @@
 
     <!--css file-->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- <link rel="stylesheet" href="css/swiper.min.css" /> -->
 
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -25,6 +25,9 @@
 <body>
     <header class="header">
         <div class="container container-header">
+            <span class="open-nav-slider" id="open-header-sidebar">
+                <i class="fa-solid fa-bars"></i>
+            </span>
             <a href="https://cashrace.in">
                 <div class="logo-container border-white">
                     <img class="logo" src="images/cashRace-logo.png" alt="cashRace-logo-img">
@@ -46,8 +49,6 @@
                 <div class="result-box"></div>
 
             </div>
-
-            <a class="login-container btn btn-xxl btn-primary fw-xb fs16">Login</a>
 
         </div>
 
@@ -92,7 +93,7 @@
         <div class="sidebar-left-part">
             <div class="sidebar-top">
                 <i class="fa-solid fa-circle-user"></i>
-                <h2>Hello, <span>sign in</span></h2>
+                <h2>Welcome to CashRace</h2>
             </div>
             <div class="sidebar-wrap">
 
@@ -143,7 +144,7 @@
                     </ul>
                 </div>
 
-                <div class="sidebar-item">
+                <div class="sidebar-item hide-on-mobile">
                     <h2>Cashback Stores</h2>
                     <ul>
                         <li>
@@ -204,14 +205,14 @@
                 </div>
 
                 <div class="sidebar-item">
-                    <h2>Help & Settings</h2>
+                    <h2>Help</h2>
                     <ul>
                         <li>
                             <a href="profit-track.html">Track Your Profit</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">Sign in</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
@@ -234,7 +235,7 @@
                     </a>
                 </div>
 
-                <div class="image-item">
+                <div class="image-item hide-on-mobile">
                     <a
                         href="https://www.udemy.com/?utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=ue*79h9bSBU&ranMID=47901&ranEAID=ue*79h9bSBU&ranSiteID=ue.79h9bSBU-88aso39KmvZhoF2pN4Wm0g">
                         <img src="images/banners/udeny-banner.png" />
@@ -269,14 +270,14 @@
                     </a>
                 </div>
 
-                <div class="image-item">
+                <div class="image-item hide-on-mobile">
                     <a
                         href="https://mamaearth.in/?utm_source=Cashkaro&utm_medium=affise_affiliate&utm_campaign=Sept23&utm_term=cps_19_ENKR20231106A674757342_ENKR20231106A674757342&pid=19&sub2=ENKR20231106A674757342&sub1=ENKR20231106A674757342">
                         <img src="images/banners/mamaearth-banner.png" />
                     </a>
                 </div>
 
-                <div class="image-item">
+                <div class="image-item hide-on-mobile">
                     <a
                         href="https://www.lotusbotanicals.com/collections/offers?utm_source=affiliate&utm_medium=mobligent&utm_campaign=offers_717_ENKR20231106A674757502_6548920e373e3200018169d1">
                         <img src="images/banners/lotus-banner.png" />
@@ -293,8 +294,106 @@
         </div>
     </section>
 
-    <!--product container card-->
     <main class="main">
+
+        <!-- Best Cashback Offers -->
+        <div class="container">
+            <div class="viewed-deal block-head" id="bestcbstores">
+                <div class="heading1">
+                        <h2 class="dib ml6 fs18 fw-bold mb10">Cashback Offers</h2>
+                    <a class="view-all" href="cashback-stores.html">View All</a>
+                </div>
+                    <div class="best-cbstore">
+
+                        <a class="best-store-inner"
+                            href="https://www.amazon.in/?&linkCode=sl2&tag=mansihall100-21&linkId=fbdac635dc3a1deb4c479101ea4c1b98&language=en_IN&ref_=as_li_ss_tl"
+                            title="Amazon"><img class="store-img" src="images/logo/amazon-logo.png" alt="Amazon"
+                                id="home_fs_amazon" width="90" height="66"><span class="retailer-cashback">12%
+                                Rewards</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.flipkart.com/?affid=rohanpouri&affExtParam1=ENKR20231104A673225511&affExtParam2=ENKR20231104A673225511"
+                            title="FlipKart"><img class="store-img" src="images/logo/Flipkart-logo.png" alt="FlipKart"
+                                id="home_fs_flipkart" width="90" height="66"><span class="retailer-cashback">7%
+                                Rewards</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.myntra.com/?utm_source=cashkaro&utm_medium=Affiliates&utm_term=65465d0315334a00016fc336&pid=4&sub1=&sub2=ENKR20231104A673227433&utm_campaign=4_ENKR20231104A673227433&source=dms_trafficaffiliates&medium=cashkaro_rev"
+                            title="Myntra"><img class="store-img" src="images/logo/Myntra-logo.png" alt="Myntra"
+                                id="home_fs_myntra" width="90" height="66"><span class="retailer-cashback">6.5%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.nykaa.com/?ptype=home&utm_source=Affiliate&utm_medium=Cashkaro&utm_campaign=4_ENKR20231104A673229678&pid=4&sub2=ENKR20231104A673229678"
+                            title="Nykaa Beauty"><img class="store-img" src="images/logo/nykaa-logo.png"
+                                alt="Nykaa Beauty" id="home_fs_nykaa_beauty" width="90" height="66"><span
+                                class="retailer-cashback">6.5% Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://linkredirect.in/visitretailer/14?id=2423240&shareid=ENKR20230318S22602672"
+                            title="TATA Cliq"><img class="store-img" src="images/logo/tata-cliq-logo.png"
+                                alt="TATA Cliq" id="home_fs_ajio.com" width="90" height="66"><span
+                                class="retailer-cashback">2.5% Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://linkredirect.in/visitretailer/924?id=2423240&shareid=ENKR20230319S22630031"><img
+                                class="store-img" src="images/logo/udemy-logo.jpg" alt="Udemy" id="home_fs_udemy"
+                                width="90" height="66"><span class="retailer-cashback">5% Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.snapdeal.com/?utm_source=cashkaro&utm_medium=affiliate&utm_content=cashkaro&utm_campaign=ENKR20231104A673233942"><img
+                                class="store-img" src="images/logo/snapdeal-logo.png" alt="Snapdeal"
+                                id="home_fs_xyxx_apparels" width="90" height="66"><span class="retailer-cashback">16%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner" href="#" title="realme"><img class="store-img"
+                                src="images/logo/realme-logo.jpg" alt="realme" id="home_fs_realme" width="90"
+                                height="66"><span class="retailer-cashback">1%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.makemytrip.com/hotels/?cmp=disp_CashKaro_DH&source=ENKR20231104A673249645"
+                            title="Makemytrip Domestic Hotels"><img class="store-img"
+                                src="images/logo/MakeMyTrip_Logo.png" alt="Makemytrip Domestic Hotels"
+                                id="home_fs_makemytrip_domestic_hotels" width="90" height="66"><span
+                                class="retailer-cashback">₹90 Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.lotusbotanicals.com/collections/offers?utm_source=affiliate&utm_medium=mobligent&utm_campaign=offers_717_ENKR20231104A673259046_65465efa87f8990001cb2d98"
+                            title="Lotus"><img class="store-img" src="images/logo/lotus-botanicals-logo.jpg" alt="Lotus"
+                                id="home_fs_lotus" width="90" height="66"><span class="retailer-cashback">25%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://linkredirect.in/visitretailer/7535?id=1849693&shareid=ENKR20230324S22912660"
+                            title="GoDaddy"><img class="store-img" src="images/logo/GoDaddy-logo.png" alt="GoDaddy"
+                                id="home_fs_goDaddy" width="90" height="66"><span class="retailer-cashback">5%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://www.croma.com/?utm_source=Cashkaro&utm_medium=affiliate&utm_campaign=sok_Cashkaro_ENKR20231104A673261116&utm_content=cashback&sub1=65465f29c100d40001eb4dbd"
+                            title="Croma"><img class="store-img" src="images/logo/croma-logo.jpg" alt="Croma"
+                                id="home_fs_croma" width="90" height="66"><span class="retailer-cashback">1.5%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://beardo.in/?utm_source=Network_cashkaro&utm_campaign=trackier_2&click_id=65465e11e40b7d0345d3a399&utm_medium=ENKR20231104A673246832"
+                            title="Beardo"><img class="store-img" src="images/logo/Beardo-logo.png" alt="Beardo"
+                                id="home_fs_beardo" width="90" height="66"><span class="retailer-cashback">5%
+                                Cashback</span></a>
+
+                        <a class="best-store-inner"
+                            href="https://mamaearth.in/?utm_source=Cashkaro&utm_medium=affise_affiliate&utm_campaign=Sept23&utm_term=cps_19_ENKR20231104A673262668_ENKR20231104A673262668&pid=19&sub2=ENKR20231104A673262668&sub1=ENKR20231104A673262668"
+                            title="mamaearth"><img class="store-img" src="images/logo/mamaearth-logo.png"
+                                alt="mamaearth" id="home_fs_mamaearth" width="90" height="66"><span
+                                class="retailer-cashback">15%
+                                Cashback</span></a>
+
+                    </div>
+                </div>
+            </div>
+
+        <!--product container card-->
         <div class="card-product-container container">
 
             <!-- Card 1 -->
@@ -644,107 +743,9 @@
 
         </div>
 
-        <!-- Best Cashback Offers -->
-        <div class="container">
-            <div class="viewed-deal block-head" id="bestcbstores">
-                <div class="brand-rates-cont">
-                    <div class="heading1">
-                        <h2 class="dib mb10">Best Cashback Offers </h2>
-                    </div>
-                    <div class="best-cbstore">
-
-                        <a class="best-store-inner"
-                            href="https://www.amazon.in/?&linkCode=sl2&tag=mansihall100-21&linkId=fbdac635dc3a1deb4c479101ea4c1b98&language=en_IN&ref_=as_li_ss_tl"
-                            title="Amazon"><img class="store-img" src="images/logo/amazon-logo.png" alt="Amazon"
-                                id="home_fs_amazon" width="90" height="66"><span class="retailer-cashback">12%
-                                Rewards</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.flipkart.com/?affid=rohanpouri&affExtParam1=ENKR20231104A673225511&affExtParam2=ENKR20231104A673225511"
-                            title="FlipKart"><img class="store-img" src="images/logo/Flipkart-logo.png" alt="FlipKart"
-                                id="home_fs_flipkart" width="90" height="66"><span class="retailer-cashback">7%
-                                Rewards</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.myntra.com/?utm_source=cashkaro&utm_medium=Affiliates&utm_term=65465d0315334a00016fc336&pid=4&sub1=&sub2=ENKR20231104A673227433&utm_campaign=4_ENKR20231104A673227433&source=dms_trafficaffiliates&medium=cashkaro_rev"
-                            title="Myntra"><img class="store-img" src="images/logo/Myntra-logo.png" alt="Myntra"
-                                id="home_fs_myntra" width="90" height="66"><span class="retailer-cashback">6.5%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.nykaa.com/?ptype=home&utm_source=Affiliate&utm_medium=Cashkaro&utm_campaign=4_ENKR20231104A673229678&pid=4&sub2=ENKR20231104A673229678"
-                            title="Nykaa Beauty"><img class="store-img" src="images/logo/nykaa-logo.png"
-                                alt="Nykaa Beauty" id="home_fs_nykaa_beauty" width="90" height="66"><span
-                                class="retailer-cashback">6.5% Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://linkredirect.in/visitretailer/14?id=2423240&shareid=ENKR20230318S22602672"
-                            title="TATA Cliq"><img class="store-img" src="images/logo/tata-cliq-logo.png"
-                                alt="TATA Cliq" id="home_fs_ajio.com" width="90" height="66"><span
-                                class="retailer-cashback">2.5% Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://linkredirect.in/visitretailer/924?id=2423240&shareid=ENKR20230319S22630031"><img
-                                class="store-img" src="images/logo/udemy-logo.jpg" alt="Udemy" id="home_fs_udemy"
-                                width="90" height="66"><span class="retailer-cashback">5% Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.snapdeal.com/?utm_source=cashkaro&utm_medium=affiliate&utm_content=cashkaro&utm_campaign=ENKR20231104A673233942"><img
-                                class="store-img" src="images/logo/snapdeal-logo.png" alt="Snapdeal"
-                                id="home_fs_xyxx_apparels" width="90" height="66"><span class="retailer-cashback">16%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner" href="#" title="realme"><img class="store-img"
-                                src="images/logo/realme-logo.jpg" alt="realme" id="home_fs_realme" width="90"
-                                height="66"><span class="retailer-cashback">1%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.makemytrip.com/hotels/?cmp=disp_CashKaro_DH&source=ENKR20231104A673249645"
-                            title="Makemytrip Domestic Hotels"><img class="store-img"
-                                src="images/logo/MakeMyTrip_Logo.png" alt="Makemytrip Domestic Hotels"
-                                id="home_fs_makemytrip_domestic_hotels" width="90" height="66"><span
-                                class="retailer-cashback">₹90 Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.lotusbotanicals.com/collections/offers?utm_source=affiliate&utm_medium=mobligent&utm_campaign=offers_717_ENKR20231104A673259046_65465efa87f8990001cb2d98"
-                            title="Lotus"><img class="store-img" src="images/logo/lotus-botanicals-logo.jpg" alt="Lotus"
-                                id="home_fs_lotus" width="90" height="66"><span class="retailer-cashback">25%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://linkredirect.in/visitretailer/7535?id=1849693&shareid=ENKR20230324S22912660"
-                            title="GoDaddy"><img class="store-img" src="images/logo/GoDaddy-logo.png" alt="GoDaddy"
-                                id="home_fs_goDaddy" width="90" height="66"><span class="retailer-cashback">5%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://www.croma.com/?utm_source=Cashkaro&utm_medium=affiliate&utm_campaign=sok_Cashkaro_ENKR20231104A673261116&utm_content=cashback&sub1=65465f29c100d40001eb4dbd"
-                            title="Croma"><img class="store-img" src="images/logo/croma-logo.jpg" alt="Croma"
-                                id="home_fs_croma" width="90" height="66"><span class="retailer-cashback">1.5%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://beardo.in/?utm_source=Network_cashkaro&utm_campaign=trackier_2&click_id=65465e11e40b7d0345d3a399&utm_medium=ENKR20231104A673246832"
-                            title="Beardo"><img class="store-img" src="images/logo/Beardo-logo.png" alt="Beardo"
-                                id="home_fs_beardo" width="90" height="66"><span class="retailer-cashback">5%
-                                Cashback</span></a>
-
-                        <a class="best-store-inner"
-                            href="https://mamaearth.in/?utm_source=Cashkaro&utm_medium=affise_affiliate&utm_campaign=Sept23&utm_term=cps_19_ENKR20231104A673262668_ENKR20231104A673262668&pid=19&sub2=ENKR20231104A673262668&sub1=ENKR20231104A673262668"
-                            title="mamaearth"><img class="store-img" src="images/logo/mamaearth-logo.png"
-                                alt="mamaearth" id="home_fs_mamaearth" width="90" height="66"><span
-                                class="retailer-cashback">15%
-                                Cashback</span></a>
-
-                    </div>
-                </div>
-            </div>
-
             <div class="valign-wrapper mt20">
                 <h2>How to Earn Cashback</h2>
             </div>
-
 
             <div class="grid-block how-work-cont">
 
@@ -782,7 +783,7 @@
                     <span class="how-work-step">Step 4</span>
                 </div>
 
-                <div class="how-work-inner">
+                <div class="how-work-inner last-how-work-inner">
                     <br>
                     <i class="fa-solid fa-money-bill-transfer fa-2xl" style="color: #ffa600;"></i>
                     <div class="mt20 fs18 fw-xb">Transfer</div>
@@ -822,12 +823,6 @@
                         <div><span class="cat-head-txt">Fashion ₹400</span><span class="db">on shopping of every
                                 ₹800</span></div>
                     </div>
-
-
-
-                </div>
-                <div class="saving-cat">
-                    <a class="btn btn-xxl btn-primary fw-xb fs16">Sign Up</a>
                 </div>
             </div>
 
@@ -956,10 +951,11 @@
             </div>
 
             <div class="product_container"></div>
+            </div>
 
 
             <!-- Testimonial -->
-            <div class="valign-wrapper ml30">
+            <div class="valign-wrapper">
                 <h2 class="mb0">Why do 5K+ users love us</h2>
             </div>
 
