@@ -1684,10 +1684,13 @@ h3 {
     padding: 8px 10px;
   }
 
-  .shop-head .view-all,
-  .view-all {
+  .shop-head {
     line-height: 22px;
     font-size: 12px;
+  }
+
+  .view-all {
+    font-size: 0.6rem;
   }
 
   .prod-disc {
