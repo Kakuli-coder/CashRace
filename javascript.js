@@ -491,6 +491,13 @@ function display(resultObjectsArray) {
 };
 
 
+// Text indent correctly input text in header (on result box click)
+resultsBox.addEventListener("click", () => {
+    inputBox.style.textIndent = "-30px";
+});
+
+
+// nav cover functionality
 const navCoverDiv = document.querySelector(".nav-cover-div");
 
 inputBox.addEventListener("click", () => {

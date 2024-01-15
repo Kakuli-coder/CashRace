@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -559,6 +560,7 @@ body {
 }
 
 /* --------------------- Deals & Coupons -------------------- */
+
 .products_list {
   display: flex;
   overflow: hidden;
@@ -621,6 +623,11 @@ body {
   font-size: 12px;
   display: inline;
 }
+
+.today_deals_product_container {
+  margin: 10px 0;
+}
+
 
 /* footer */
 .top {
@@ -3221,6 +3228,10 @@ h3 {
     padding-top: 2px;
   }
 
+  .cat-tab {
+    height: 121px;
+  }
+
   .cat-inner {
     text-align: center;
     cursor: pointer;
@@ -3545,10 +3556,6 @@ h3 {
 
   #open-header-sidebar {
     display: none;
-  }
-
-  .card-product {
-    flex: 25%;
   }
 
   .hide-on-veryLarge-devices {
