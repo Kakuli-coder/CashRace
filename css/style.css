@@ -2938,7 +2938,7 @@ h3 {
   }
 
   .sidebar-left-part {
-    width: 60%;
+    width: 70%;
   }
 
   .sidebar-top {
@@ -3383,6 +3383,12 @@ h3 {
   }
 }
 
+@media screen and (min-width: 450px) and (max-width: 645px) {
+  .sidebar-left-part {
+    width: 55%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .result-box {
     width: 82%;
@@ -3429,6 +3435,10 @@ h3 {
 @media (min-width: 1290px) and (max-width: 1500px) {
   .header {
     width: 100%;
+  }
+
+  .sidebar-left-part {
+    width: 30%;
   }
 
   #open-header-sidebar {
@@ -3551,6 +3561,10 @@ h3 {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1145px) {
+  .sidebar-left-part {
+    width: 30%;
+  }
+
   #slide-btn-right {
     margin-left: 92%;
   }
@@ -3603,6 +3617,10 @@ h3 {
 @media screen and (min-width: 1145px) and (max-width: 1290px) {
   #slide-btn-right {
     margin-left: 93%;
+  }
+
+  .sidebar-left-part {
+    width: 35%;
   }
 
   .main {
