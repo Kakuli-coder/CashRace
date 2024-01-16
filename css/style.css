@@ -28,13 +28,17 @@ body {
   /* background-color: red; */
   height: 100%;
   margin: auto;
-  /* max-width: fit-content !important; */
 }
 
 .container-header {
   display: flex;
   align-items: center;
 }
+
+.reload-page {
+  cursor: pointer;
+}
+
 
 /**logo***/
 .logo-container {
@@ -156,18 +160,6 @@ body {
   margin: 0;
   text-align: left;
 }
-
-/***login-container***/
-/* .login-container {
-  margin-left: 8rem;
-  align-content: flex-end;
-}
-
-.login-container a {
-  margin: 0;
-  text-decoration: none;
-  color: white;
-} */
 
 /**************************************navigation*****************************************/
 .nav {

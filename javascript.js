@@ -16,6 +16,16 @@ import { smartWatchAndFitnessBand } from "./js/smartWatchAndFitnessBand.js";
 import { autocompleteListWithLinks } from "./js/autocomplete.js";
 
 
+// Reload page
+const reloadPage = document.querySelector(".reload-page");
+reloadPage.addEventListener("click", () => {
+    window.location.reload();
+});
+
+
+
+
+
 
 const inputBox = document.querySelector(".input-box");
 const openHeaderSidebar = document.querySelector("#open-header-sidebar");
